@@ -283,3 +283,18 @@ hr {
 .bottom .left .header-todo-list .time {
   font-weight: 600;
 }
+.bottom .task-container .task-completed .count-completed,
+.bottom .task-container .task .count-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  color: white;
+}
+.bottom .task-container .task-completed .count-completed img,
+.bottom .task-container .task .count-task img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}

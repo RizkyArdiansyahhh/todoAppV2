@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     addTodo();
+    countTask();
   });
 });
 
@@ -85,6 +86,7 @@ function makeTodo(todoObject) {
 
     deleteTodo.addEventListener("click", function () {
       deleteTodoAction(todoObject.id);
+      countTask();
     });
 
     const icon = document.createElement("div");
@@ -182,3 +184,16 @@ const setTime = setInterval(function () {
   const stringTime = document.querySelector(".time");
   stringTime.innerText = `${dayName} ${h} : ${m} : ${s}`;
 }, 1000);
+
+function countTask() {
+  const countAdd = document.querySelector(".count-add");
+  let count = 0;
+
+  for (const todoItem of todos) {
+    if (!todoItem.isCompleted) {
+      count += 1; // Tambahkan jika tugas belum selesai
+    }
+  }
+
+  countAdd.innerText = count; // Tampilkan jumlah tugas yang belum selesai
+}
