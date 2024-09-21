@@ -121,6 +121,11 @@ body {
 .right-container .left .list-task .list-task-completed {
   width: 40%;
 }
+.right-container .left .list-task .list-task-completed h4.title-h4,
+.right-container .left .list-task .list-task-proses h4.title-h4 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
 .right-container .left .list-task .list-task-completed .completed .item {
   padding: 1rem;
   border-radius: 20px;
