@@ -14,6 +14,9 @@ body {
   width: 20vw;
   height: 100vh;
   background-color: #f7f7f7;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 .left-container .profile {
   display: flex;
@@ -81,6 +84,8 @@ body {
   width: 80vw;
   padding-inline: 2rem;
   height: 100vh;
+  margin-left: 20vw;
+  overflow-y: scroll;
 }
 .right-container .header {
   height: 15%;
@@ -101,18 +106,28 @@ body {
 .right-container .left .list-task .list-task-proses {
   width: 40%;
 }
-.right-container .left .list-task .list-task-proses .proses {
+.right-container .left .list-task .list-task-proses .proses .item,
+.right-container .left .list-task .list-task-completed .completed .item {
+  margin-bottom: 1rem;
+}
+.right-container .left .list-task .list-task-proses .proses .item {
   padding: 1rem;
   background-color: #fae9e9;
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .right-container .left .list-task .list-task-completed {
   width: 40%;
 }
-.right-container .left .list-task .list-task-completed .completed {
+.right-container .left .list-task .list-task-completed .completed .item {
   padding: 1rem;
   border-radius: 20px;
   background-color: #e7e7fe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .right-container .left .image-hero {
   background: url(../assets/bghome.jpg);
@@ -243,4 +258,23 @@ hr {
   background-color: white;
   border: 1px solid #725cfe;
   color: #161719;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.icon img {
+  height: 32px;
+  width: 32px;
+}
+
+.bottom .left .header-todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .left .header-todo-list .time {
+  font-weight: 600;
 }
