@@ -86,7 +86,6 @@ function makeTodo(todoObject) {
 
     deleteTodo.addEventListener("click", function () {
       deleteTodoAction(todoObject.id);
-      countTask();
     });
 
     const icon = document.createElement("div");
@@ -134,6 +133,8 @@ function checkedTodoAction(todoId) {
   const todoTarget = findTodo(todoId);
   if (todoTarget == null) return;
   todoTarget.isCompleted = true;
+  countTask();
+
   document.dispatchEvent(new Event(RENDER_EVENT));
 }
 
@@ -187,13 +188,18 @@ const setTime = setInterval(function () {
 
 function countTask() {
   const countAdd = document.querySelector(".count-add");
-  let count = 0;
+  const countCompleted = document.querySelector(".count-complet");
+  let count1 = 0;
+  let count2 = 0;
 
   for (const todoItem of todos) {
     if (!todoItem.isCompleted) {
-      count += 1; // Tambahkan jika tugas belum selesai
+      count1 += 1;
+    } else {
+      count2 += 1;
     }
   }
 
-  countAdd.innerText = count; // Tampilkan jumlah tugas yang belum selesai
+  countAdd.innerText = count1;
+  countCompleted.innerText = count2;
 }
