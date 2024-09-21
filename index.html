@@ -69,9 +69,43 @@
             <div class="image-hero"></div>
             <hr />
             <h2>To Do List</h2>
+            <div class="list-task">
+              <div class="list-task-proses">
+                <h4>On Proses</h4>
+                <div class="proses">
+                  <div class="teks">Belajar</div>
+                </div>
+              </div>
+              <div class="list-task-completed">
+                <h4>Completed</h4>
+                <div class="completed">
+                  <div class="teks">Belajar</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="right">
-            <div class="today"></div>
+            <div class="today">
+              <h2>Tambahkan Aktivitas</h2>
+              <form action="#" id="form">
+                <div class="teks">
+                  <label for="teks">Masukkan hal yang akan dilakukan</label>
+                  <input type="text" name="teks" id="teks" required />
+                </div>
+                <div class="date">
+                  <label for="date">Masukkan Tanggal</label>
+                  <input type="date" name="date" id="date" required />
+                </div>
+                <div class="submit">
+                  <input
+                    type="submit"
+                    value="+ add"
+                    name="submit"
+                    class="btn-submit"
+                  />
+                </div>
+              </form>
+            </div>
             <div class="task-container">
               <div class="task-completed"></div>
               <div class="task"></div>
@@ -80,5 +114,6 @@
         </div>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
